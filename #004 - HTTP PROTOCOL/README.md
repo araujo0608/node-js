@@ -31,8 +31,11 @@ console.log("server running on localhost:8081...");
 
 <br>
 
-3. Now in your terminal run: 
+3. Now in your terminal run:
 
 ```
 node file.js
 ```
+
+4.
+![localhost]('localhost nodejs.png')
