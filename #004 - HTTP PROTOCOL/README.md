@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 # HTTP SERVER WITH NODE
 
 By default node has a HTTP module enabled, but is very limited. After we gonna use `express` framework, but now familiarize yourself with basic module.
@@ -36,6 +36,3 @@ console.log("server running on localhost:8081...");
 ```
 node file.js
 ```
-
-=======
->>>>>>> Stashed changes
