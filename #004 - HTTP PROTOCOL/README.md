@@ -38,4 +38,4 @@ node file.js
 ```
 
 4.
-![localhost]('localhost nodejs.png')
+![localhost](localhost-nodejs.png)
