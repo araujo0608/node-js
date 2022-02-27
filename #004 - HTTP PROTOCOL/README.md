@@ -17,7 +17,7 @@ var http = require("http");
 var http = require("http");
 
 http.createServer(function(req, res){
-   res.end("Hello World!");
+   res.end("Hello!");
 }).listen(8081);
 
 console.log("server running on localhost:8081...");
@@ -37,5 +37,5 @@ console.log("server running on localhost:8081...");
 node file.js
 ```
 
-4.
+4. Open your Browser and access `locahost:8081`
 ![localhost](localhost-nodejs.png)
