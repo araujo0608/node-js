@@ -38,4 +38,11 @@ node file.js
 ```
 
 4. Open your Browser and access `locahost:8081`
+
+<br>
+
 ![localhost](localhost-nodejs.png)
+
+<br>
+
+> With each update in your code, you need to stop the server **CTRL + C** and start it again **node file.js** . But this can be fixed later by express.
