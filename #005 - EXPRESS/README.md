@@ -31,7 +31,7 @@ Some folders was add in your workspace:
 ![workspace](workspace.png)
 
 
-## HOW USE EXPRESS
+## HOW USE EXPRESS AND CREATE A HTTP SERVER
 
 It's pretty easy use express in your code.
 
@@ -49,3 +49,18 @@ const app = express();
 ~~~
 
 > Pay attention, the variable `app` now has everything from express. All modules and functions from express are contained in this variable. So it is good to set it to `const`, just to avoid changing its state
+
+3. Now create a server adding `app.listen(8081)` in your code. I choose 8081 port, but you can change to another:
+
+~~~javascript
+const express = require("express");
+const app = express();
+
+app.listen(8081, function(){
+  console.log("server running on http://localhost:8081");
+});
+~~~
+
+> I use a callback function just to show a message in terminal
+
+![http-express](httpserver-express.png);
