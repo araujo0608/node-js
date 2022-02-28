@@ -64,3 +64,7 @@ app.listen(8081, function(){
 > I use a callback function just to show a message in terminal
 
 ![http-express](httpserver-express.png);
+
+<br>
+
+![terminal](terminal-msg.png);
