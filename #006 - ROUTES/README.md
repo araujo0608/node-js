@@ -17,3 +17,33 @@ Each route can have one or more functions, and it must be unique; when it receiv
 And there is no point in randomly accessing any route, it must be a route known by the application. In other words, there is no point in "creating" new non-existent routes because the back-end will return an error, probably with code 404. Like this:
 
 ![error](google-noroute.png);
+
+## HOW USE ROUTES IN EXPRESS
+
+
+When you access the webpage in first time, you saw a message like that: `cannot get /` in HTML body. This is why we don't configure any route in our application.
+
+1. Add a route in code:
+
+~~~javascript
+app.get("/", function(req, res){
+  res.end("Welcome to my website!");
+});
+~~~
+
+> app.get(route, callback function)
+
+Final code:
+
+~~~javascript
+const express = require("express");
+const app = express();
+
+app.get("/", function(req, res){
+  res.end("Welcome to my website!");
+})
+
+app.listen(8081, function(){
+  console.log("server running on http://localhost:8081");
+});
+~~~
