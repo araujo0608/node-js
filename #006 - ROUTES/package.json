@@ -1,0 +1,14 @@
+{
+  "name": "route-repository",
+  "version": "1.0.0",
+  "description": "Learning about routes in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Araujo Da Silva",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
