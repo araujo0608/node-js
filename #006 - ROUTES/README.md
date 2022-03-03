@@ -14,7 +14,7 @@ Each route can have one or more functions, and it must be unique; when it receiv
 
 <br>
 
-And there is no point in randomly accessing any route, it must be a route known by the application. In other words, there is no point in "creating" new non-existent routes because the back-end will return an error, probably with code 404. Like this:
+And there is no point in randomly accessing any route, it must be a route known by the application. In other words, there is no point in "creating" new non-existent routes because the back-send will return an error, probably with code 404. Like this:
 
 ![error](google-noroute.png);
 
@@ -27,23 +27,68 @@ When you access the webpage in first time, you saw a message like that: `cannot 
 
 ~~~javascript
 app.get("/", function(req, res){
-  res.end("Welcome to my website!");
+  res.send("Welcome to my website!");
 });
 ~~~
 
 > app.get(route, callback function)
 
-Final code:
+Your code:
 
 ~~~javascript
 const express = require("express");
 const app = express();
 
 app.get("/", function(req, res){
-  res.end("Welcome to my website!");
+  res.send("Welcome to my website!");
 })
 
 app.listen(8081, function(){
   console.log("server running on http://localhost:8081");
 });
 ~~~
+
+If necessary you can add more routes, like:
+
+~~~javascript
+const express = require("express");
+const app = express();
+
+app.get("/", function(req, res){
+  res.send("Welcome to my website!");
+})
+
+// Adding more routes
+app.get("/about", function(req, res){
+  res.send("About us");
+})
+
+app.get("/roadmap", function(req, res){
+  res.send("Our roadmap");
+})
+
+app.listen(8081, function(){
+  console.log("server running on http://localhost:8081");
+});
+~~~
+
+## USING PARAMETERS
+
+We can pass parameters in the URL and manipulate this data with nodejs. This is possible because we have access to the request and response from our HTTP server.
+
+1. In any route, add `/:parameter` for example:
+
+~~~javascript
+// With param
+app.get("/hello/:name", function(req, res){
+  res.send("Hello " + req.params.name)
+});
+~~~
+
+Then we can add **param** in url:
+
+  ![route with param](route-param.png);
+
+> But keep in mind, that when we do this it is mandatory to pass a parameter in the route. Otherwise, an error will occur.
+
+![route error param](error-route-param.png);
